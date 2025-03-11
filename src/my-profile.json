@@ -1,0 +1,12 @@
+{
+  "name": "Marcel Douceur",
+  "age": 30,
+  "email": "marceldouceur@johndoe.com",
+  "address": {
+    "street": "123 Main Street",
+    "city": "New York",
+    "state": "NY",
+    "zip": "10001"
+  },
+  "interests": ["programming", "music", "travel"]
+}
