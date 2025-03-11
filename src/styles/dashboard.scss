@@ -1,0 +1,118 @@
+// Variables
+$primary-color: #4f46e5;
+$secondary-color: #6366f1;
+$background-color: #f9fafb;
+$card-background: #ffffff;
+$text-primary: #111827;
+$text-secondary: #6b7280;
+$border-color: #e5e7eb;
+
+// Mixins
+@mixin card {
+  background: $card-background;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+// Dashboard styles
+.dashboard {
+  min-height: 100vh;
+  background-color: $background-color;
+  padding: 1.5rem;
+
+  &__header {
+    @include flex-center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    h1 {
+      font-size: 1.875rem;
+      font-weight: 600;
+      color: $text-primary;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  &__card {
+    @include card;
+
+    &-header {
+      @include flex-center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+
+      h2 {
+        font-size: 1.25rem;
+        font-weight: 500;
+        color: $text-primary;
+      }
+    }
+
+    &-content {
+      color: $text-secondary;
+    }
+  }
+
+  &__table {
+    @include card;
+    overflow-x: auto;
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+
+      th, td {
+        padding: 1rem;
+        text-align: left;
+        border-bottom: 1px solid $border-color;
+      }
+
+      th {
+        font-weight: 500;
+        color: $text-primary;
+      }
+
+      td {
+        color: $text-secondary;
+      }
+
+      tr:last-child td {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+
+  &--completed {
+    background-color: #dcfce7;
+    color: #15803d;
+  }
+
+  &--pending {
+    background-color: #fef9c3;
+    color: #854d0e;
+  }
+
+  &--cancelled {
+    background-color: #fee2e2;
+    color: #991b1b;
+  }
+}
