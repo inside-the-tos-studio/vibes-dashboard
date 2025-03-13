@@ -1,12 +1,17 @@
 {
-  "name": "Marcel Douceur",
+  "name": "theonestudio",
+  "password": "123456",
   "age": 30,
-  "email": "marceldouceur@johndoe.com",
+  "email": "theonestudio@theonestudio.com",
   "address": {
     "street": "123 Main Street",
     "city": "New York",
     "state": "NY",
     "zip": "10001"
   },
-  "interests": ["programming", "music", "travel"]
+  "interests": [
+    "programming",
+    "music",
+    "travel"
+  ]
 }
